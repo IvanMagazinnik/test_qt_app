@@ -22,5 +22,5 @@ script:
       && PATH="$QTDIR/bin:$PATH"
       && qt54-env.sh 
       ;
-  -qmake && make -s -j 2
-  -./application
+  - qmake && make
+  - ./application
