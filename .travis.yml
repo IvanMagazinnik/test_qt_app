@@ -2,24 +2,13 @@ language: cpp
 
 os:
   - linux
-
-env:
-  matrix:
-    - CONFIG=release
-install:
-  - lsb_release -a
-  - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-add-repository -y ppa:beineri/opt-qt542
-  - sudo apt-get -qq update
-  - sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt54script
-  - export CXX="g++-4.8"
-  - export CC="gcc-4.8"
-      ;
+before_script:
+    - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
 script:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         QTDIR="/opt/qt54"
-      && PATH="$QTDIR/bin:$PATH"
-      && qt54-env.sh 
-      ;
-  - qmake && make
+    - qmake -qt=qt5 -v
+    - qmake -qt=qt5
+    - make
+
   - ./application
