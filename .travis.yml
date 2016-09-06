@@ -22,4 +22,4 @@ script:
   - qmake
   - make
   - ls $TRAVIS_BUILD_DIR
-  - xvfb-run -- $TRAVIS_BUILD_DIR/application
+  - ./application
