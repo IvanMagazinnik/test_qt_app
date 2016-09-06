@@ -14,7 +14,6 @@ install:
   - source /opt/qt57/bin/qt57-env.sh;
     
 script:
-  - qmake -qt=qt57 -v
-  - qmake -qt=qt57
+  - qmake
   - make
   - ./application
