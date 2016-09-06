@@ -16,4 +16,4 @@ install:
 script:
   - qmake
   - make
-  - ./application
+  - xvfb-run -- /application
