@@ -12,6 +12,11 @@ install:
   - sudo apt-get install -qq qt57base; 
   - sudo apt-get -y install qt57declarative qt57quickcontrols qt57graphicaleffects qt57tools qt57charts-no-lgpl
   - source /opt/qt57/bin/qt57-env.sh;
+  
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
     
 script:
   - qmake
