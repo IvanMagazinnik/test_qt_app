@@ -5,6 +5,9 @@ language: cpp
 os:
   - linux
 before_install:
+  - Xvfb :1 & PID=$!
+  - DISPLAY=:1 make check
+  - kill $PID
   - sudo add-apt-repository -y ppa:beineri/opt-qt57-trusty
 
 install:
