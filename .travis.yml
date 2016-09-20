@@ -26,4 +26,4 @@ script:
   - qmake
   - make
   - ls -l
-  - ./application
+  - ./mousebuttons
