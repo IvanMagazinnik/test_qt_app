@@ -21,7 +21,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
     
 script:
-  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/tree/master/MouseTester/trunk/source
+  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/trunk/MouseTester/source
   - ls -l
   - qmake
   - make
