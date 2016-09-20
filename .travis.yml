@@ -21,6 +21,8 @@ before_script:
   - sleep 3 # give xvfb some time to start
     
 script:
+  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/tree/master/MouseTester/trunk/source
+  - ls -l
   - qmake
   - make
   - ls $TRAVIS_BUILD_DIR
