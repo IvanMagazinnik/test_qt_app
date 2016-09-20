@@ -22,8 +22,9 @@ before_script:
     
 script:
   - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/trunk/MouseTester/source
-  - ls -l
+  - cd source
+  - qmake -application
   - qmake
   - make
-  - ls $TRAVIS_BUILD_DIR
+  - ls -l
   - ./application
