@@ -12,7 +12,7 @@ before_install:
 install:
   - sudo apt-get update
   - sudo apt-get install -qq qt57base; 
-  - sudo apt-get -y install qt57declarative qt57quickcontrols qt57graphicaleffects qt57tools qt57charts-no-lgpl
+  - sudo apt-get -y install qt57declarative qt57tools
   - source /opt/qt57/bin/qt57-env.sh;
   
 before_script:
