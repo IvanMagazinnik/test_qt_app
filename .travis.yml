@@ -21,9 +21,9 @@ before_script:
   - sleep 3 # give xvfb some time to start
     
 script:
-  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/trunk/MouseTester/source
+  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/trunk/SendKeysTester/source
   - cd source
   - qmake
   - make
   - ls -l
-  - ./mousebuttons
+  - ./send_keys_test_app
