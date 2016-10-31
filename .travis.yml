@@ -11,20 +11,3 @@ before_install:
 
 install:
   - sudo pip install pywinauto
-  - sudo apt-get update
-  - sudo apt-get install -qq qt57base; 
-  - sudo apt-get -y install qt57declarative qt57tools
-  - source /opt/qt57/bin/qt57-env.sh;
-  
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-    
-script:
-  - svn checkout https://github.com/MagazinnikIvan/PywinautoTestapps/trunk/SendKeysTester/source
-  - cd source
-  - qmake
-  - make
-  - ls -l
-  - ./send_keys_test_app
