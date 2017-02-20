@@ -15,6 +15,7 @@ os:
   - linux
 before_install:
   - ls /usr/lib/
+  - ls /usr/lib/at-spi2-core
   - ls /lib
 
 install:
