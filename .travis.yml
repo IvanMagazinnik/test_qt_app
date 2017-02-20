@@ -14,7 +14,7 @@ python:
 os:
   - linux
 before_install:
-  - ls /usr/lib
+  - ls /usr/lib/at-spi-core
 
 install:
   - sudo pip install pywinauto
