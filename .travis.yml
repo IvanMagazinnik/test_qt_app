@@ -14,7 +14,7 @@ python:
 os:
   - linux
 before_install:
-  - sudo add-apt-repository -y ppa:beineri/opt-qt57-trusty
+  - ls /usr/lib
 
 install:
   - sudo pip install pywinauto
