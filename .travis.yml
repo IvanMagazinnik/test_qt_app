@@ -18,7 +18,7 @@ before_install:
   - ls /usr/lib/at-spi2-core
   - ls /usr/lib/at-spi2-core/at-spi2-registryd
   - ls /usr/lib/at-spi2-core/at-spi-bus-launcher
-  - locate libatspi
+  - find / -name "*libatspi*"
   - ls /lib
 
 install:
